@@ -1,0 +1,34 @@
+{
+  "name": "miage-exe",
+  "version": "1.0.0",
+  "description": "MIAGE Windows App",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder"
+  },
+  "author": "Zbair Youness",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^38.4.0",
+    "electron-builder": "^26.0.12"
+  },
+  "build": {
+    "appId": "com.miageadmin.app",
+    "productName": "MIAGE Admin",
+    "directories": {
+      "buildResources": "build"
+    },
+    "win": {
+     "icon": "logo.png",
+      "target": [
+        "nsis"
+      ]
+    },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": true,
+      "allowToChangeInstallationDirectory": true
+    }
+  }
+}
