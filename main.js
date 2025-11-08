@@ -5,15 +5,16 @@ function createWindow() {
   const win = new BrowserWindow({
     width: 1200,
     height: 800,
-    autoHideMenuBar: true,
+ 
+    autoHideMenuBar: false,
     webPreferences: {
       nodeIntegration: false,
       contextIsolation: true
     }
   });
-
+  win.maximize();
   // Load your website (HTTP or HTTPS)
-  win.loadURL('http://192.168.15.53/admin_login.php');
+  win.loadURL('https://miage.ct.ws/admin_login.php');
 
   // Optional: Open DevTools for debugging
   // win.webContents.openDevTools();
